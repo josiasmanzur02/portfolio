@@ -148,3 +148,107 @@ footer {
   background: rgba(0, 0, 0, 0.4);
   color: var(--text-color);
 }
+
+.fa-html5 {
+  color: #e44d26; 
+}
+
+.fa-css3-alt {
+  color: #264de4; 
+}
+
+.fa-js {
+  color: #f0db4f; 
+}
+
+.fa-bootstrap {
+  color: #7952b3; 
+}
+
+.fa-react {
+  color: #61dafb; 
+}
+
+.fa-wordpress {
+  color: #21759b; 
+}
+
+.fa-mobile-screen-button {
+  color: #4caf50; 
+}
+
+.card i {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover .fa-html5 {
+  animation: bounce 0.6s;
+}
+
+.card:hover .fa-css3-alt {
+  animation: slideUp 0.6s;
+}
+
+.card:hover .fa-js {
+  animation: shake 0.6s;
+}
+
+.card:hover .fa-bootstrap {
+  animation: pulse 0.6s;
+}
+
+.card:hover .fa-react {
+  animation: spin 1.2s linear;
+}
+
+.card:hover .fa-wordpress {
+  animation: fadeInUp 0.6s;
+}
+
+.card:hover .fa-mobile-screen-button {
+  animation: wobble 0.6s;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0%   { transform: translateY(10px); opacity: 0.5; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%  { transform: translateX(-5px); }
+  75%  { transform: translateX(5px); }
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  0%   { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wobble {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(-5deg); }
+  75%  { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
