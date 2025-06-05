@@ -29,6 +29,7 @@ header {
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  padding: 1.5rem 2rem;
 }
 
 header::before {
@@ -79,7 +80,7 @@ header::before {
 }
 
 section {
-  padding: 2rem 2rem;
+  padding: 1.5rem 2rem;
 }
 
 .glass-card {
