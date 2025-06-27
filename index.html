@@ -11,13 +11,16 @@
 
 <body>
   <header>
+    <canvas id="bgCanvas"></canvas>
     <div class="hero">
-      <img src="images\portrait.jpg" alt="Portrait" class="portrait" />
+      <img src="images/portrait.jpg" alt="Portrait" class="portrait" />
       <div class="intro">
         <h1>Josias Manzur</h1>
         <p>Web Developer & Technical Support Specialist</p>
       </div>
     </div>
+  </header>
+
   </header>
 
   <section>
@@ -67,6 +70,133 @@
   <footer>
     <p>&copy; 2025 Josias Manzur. All rights reserved.</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script id="threejs-crazy">
+    const canvas = document.getElementById('bgCanvas');
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0x000000, 10, 40);
+
+    const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 100);
+    camera.position.z = 20;
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    // Starfield background
+    const starGeometry = new THREE.BufferGeometry();
+    const starCount = 1000;
+    const starPositions = new Float32Array(starCount * 3);
+    for (let i = 0; i < starCount * 3; i++) {
+      starPositions[i] = (Math.random() - 0.5) * 100;
+    }
+    starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
+    const starMaterial = new THREE.PointsMaterial({ color: 0x444444, size: 0.2 });
+    const stars = new THREE.Points(starGeometry, starMaterial);
+    scene.add(stars);
+
+    // Particles
+    const particleCount = 300;
+    const geometry = new THREE.BufferGeometry();
+    const positions = new Float32Array(particleCount * 3);
+    const velocities = new Float32Array(particleCount * 3);
+    for (let i = 0; i < particleCount * 3; i++) {
+      positions[i] = (Math.random() - 0.5) * 30;
+      velocities[i] = (Math.random() - 0.5) * 0.03;
+    }
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    const material = new THREE.PointsMaterial({
+      color: 0xb79a75,
+      size: 0.15,
+      transparent: true,
+      opacity: 0.8,
+      depthWrite: false,
+    });
+    const particles = new THREE.Points(geometry, material);
+    scene.add(particles);
+
+    // Connecting Lines
+    const maxLines = 1000;
+    const lineGeometry = new THREE.BufferGeometry();
+    const linePositions = new Float32Array(maxLines * 6);
+    lineGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
+    const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.08 });
+    const lines = new THREE.LineSegments(lineGeometry, lineMaterial);
+    scene.add(lines);
+
+    // Mouse interaction
+    let mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', e => {
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+      mouseY = -(e.clientY / window.innerHeight - 0.5) * 2;
+    });
+
+    // Animate
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Update particle positions
+      const posAttr = geometry.getAttribute('position');
+      for (let i = 0; i < particleCount * 3; i += 3) {
+        posAttr.array[i] += velocities[i];
+        posAttr.array[i + 1] += velocities[i + 1];
+        posAttr.array[i + 2] += velocities[i + 2];
+
+        if (posAttr.array[i] > 15 || posAttr.array[i] < -15) velocities[i] *= -1;
+        if (posAttr.array[i + 1] > 10 || posAttr.array[i + 1] < -10) velocities[i + 1] *= -1;
+        if (posAttr.array[i + 2] > 15 || posAttr.array[i + 2] < -15) velocities[i + 2] *= -1;
+      }
+      posAttr.needsUpdate = true;
+
+      // Update lines
+      let lineIndex = 0;
+      for (let i = 0; i < particleCount; i++) {
+        for (let j = i + 1; j < particleCount; j++) {
+          const dx = posAttr.array[i * 3] - posAttr.array[j * 3];
+          const dy = posAttr.array[i * 3 + 1] - posAttr.array[j * 3 + 1];
+          const dz = posAttr.array[i * 3 + 2] - posAttr.array[j * 3 + 2];
+          const dist = dx * dx + dy * dy + dz * dz;
+          if (dist < 3 && lineIndex < maxLines) {
+            linePositions[lineIndex * 6] = posAttr.array[i * 3];
+            linePositions[lineIndex * 6 + 1] = posAttr.array[i * 3 + 1];
+            linePositions[lineIndex * 6 + 2] = posAttr.array[i * 3 + 2];
+            linePositions[lineIndex * 6 + 3] = posAttr.array[j * 3];
+            linePositions[lineIndex * 6 + 4] = posAttr.array[j * 3 + 1];
+            linePositions[lineIndex * 6 + 5] = posAttr.array[j * 3 + 2];
+            lineIndex++;
+          }
+        }
+      }
+      for (let i = lineIndex * 6; i < linePositions.length; i++) {
+        linePositions[i] = 0; 
+      }
+      lines.geometry.attributes.position.needsUpdate = true;
+
+      // Starfield drift
+      stars.rotation.y += 0.0003;
+      stars.rotation.x += 0.0001;
+
+      // Rotate and drift
+      particles.rotation.y += 0.001;
+      particles.rotation.x += 0.0005;
+
+      // Mouse parallax
+      camera.position.x += (mouseX * 5 - camera.position.x) * 0.05;
+      camera.position.y += (mouseY * 2 - camera.position.y) * 0.05;
+      camera.lookAt(scene.position);
+
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Resize
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+
 </body>
 
 </html>
