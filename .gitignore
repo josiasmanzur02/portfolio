@@ -1,0 +1,50 @@
+# dependencies
+/node_modules
+
+# production build
+/build
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.*.local
+
+# log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+
+# prevent large files (common binary types)
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.exe
+*.dll
+*.iso
+*.img
+*.psd
+*.ai
+*.sketch
+
+# ignore all images over 10MB (enforcement requires git-lfs or pre-commit hook)
+# This is a reminder; actual enforcement needs tooling:
+# *.{jpg,jpeg,png,gif,svg,webp,mp3,wav,ogg} filter=lfs diff=lfs merge=lfs -
