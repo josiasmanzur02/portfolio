@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+:root {
+    --primary-color: #1f1e1e;
+    --accent-color: #b79a75;
+    --gradient-bg: linear-gradient(135deg, #1f1e1e, #333);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-color: #d0d0d0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "SF Pro Display", "SF Pro Icons", "Avenir Next",
+        "Avenir", "Lucida Grande", "Helvetica", "Arial", sans-serif;
+    background: var(--gradient-bg);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+#bgCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+header {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #1f1e1e, #111);
+    animation: gradientShift 30s ease infinite alternate;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+            circle at 25% 30%,
+            rgba(183, 154, 117, 0.15),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 75% 70%,
+            rgba(255, 255, 255, 0.1),
+            transparent 50%
+        );
+    filter: blur(100px);
+    z-index: 0;
+}
+
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(135deg, #1f1e1e, #111);
+    }
+    100% {
+        background: linear-gradient(135deg, #111, #1f1e1e);
+    }
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portrait {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border: 4px solid var(--accent-color);
+}
+
+.intro {
+    max-width: 500px;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+.intro p {
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 1.5rem 2rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Restrict section > .container width, but let header span full width */
+section > .container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header .container {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.glass-card,
+.cards,
+.skills-grid,
+.contact-form {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.tilted-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.tilted-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+    transition: transform 0.2s ease-out;
+}
+
+.tilted-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-radius: 1rem;
+}
+
+.tilted-card:hover .tilted-overlay {
+    opacity: 1;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    text-align: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+.card h3 {
+    color: var(--accent-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--text-color);
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 1rem;
+    background: var(--accent-color);
+    border: none;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--text-color);
+}
+
+.fa-html5 {
+    color: #e44d26;
+}
+
+.fa-css3-alt {
+    color: #264de4;
+}
+
+.fa-js {
+    color: #f0db4f;
+}
+
+.fa-bootstrap {
+    color: #7952b3;
+}
+
+.fa-react {
+    color: #61dafb;
+}
+
+.fa-wordpress {
+    color: #21759b;
+}
+
+.fa-mobile-screen-button {
+    color: #4caf50;
+}
+
+.card i {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .fa-html5 {
+    animation: bounce 0.6s;
+}
+
+.card:hover .fa-css3-alt {
+    animation: slideUp 0.6s;
+}
+
+.card:hover .fa-js {
+    animation: shake 0.6s;
+}
+
+.card:hover .fa-bootstrap {
+    animation: pulse 0.6s;
+}
+
+.card:hover .fa-react {
+    animation: spin 1.2s linear;
+}
+
+.card:hover .fa-wordpress {
+    animation: fadeInUp 0.6s;
+}
+
+.card:hover .fa-mobile-screen-button {
+    animation: wobble 0.6s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(10px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    justify-items: stretch;
+    align-items: stretch;
+    margin: 0 auto 2rem auto;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.skill-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+    padding: 2rem 1rem 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.18s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.18s;
+    cursor: pointer;
+    min-height: 170px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 220px;
+}
+
+.skill-card:hover {
+    box-shadow: 0 8px 32px rgba(183, 154, 117, 0.18),
+        0 2px 8px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent-color);
+    background: rgba(183, 154, 117, 0.08);
+}
+
+.skill-icon {
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
+    transition: filter 0.2s;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animations for icons */
+.skill-card:hover .fa-html5 {
+    animation: bounce 0.6s;
+}
+.skill-card:hover .fa-css3-alt {
+    animation: slideUp 0.6s;
+}
+.skill-card:hover .fa-js {
+    animation: shake 0.6s;
+}
+.skill-card:hover .fa-bootstrap {
+    animation: pulse 0.6s;
+}
+.skill-card:hover .fa-react {
+    animation: spin 1.2s linear;
+}
+.skill-card:hover .fa-wordpress {
+    animation: fadeInUp 0.6s;
+}
+.skill-card:hover .fa-mobile-screen-button {
+    animation: wobble 0.6s;
+}
+
+.skill-label {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-align: center;
+    width: 100%;
+}
