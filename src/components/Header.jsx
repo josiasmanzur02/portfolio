@@ -10,11 +10,11 @@ const Header = () => {
         <div className="hero">
           <ProfileCard
             name="Josias Manzur"
-            title="Web Developer"
+            title="Frontend Developer"
             handle="josiasmanzur"
             status="Online"
-            contactText="Contact Me"
-            avatarUrl="/images/profile-image.png"
+            contactText="Contact"
+            avatarUrl="/portfolio/images/profile-image.png"
             showUserInfo={true}
             enableTilt={true}
             onContactClick={() => console.log('Contact clicked')}

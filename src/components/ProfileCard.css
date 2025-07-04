@@ -98,7 +98,7 @@ body {
 .pc-card-wrapper:hover::before,
 .pc-card-wrapper.active::before {
     filter: blur(40px) brightness(1.5);
-    transform: scale(0.95);
+    transform: scale(0.9);
 }
 
 /* -----------------------------------------
@@ -121,7 +121,7 @@ body {
 .pc-card:hover,
 .pc-card.active {
     transform: rotateX(var(--rotate-y)) rotateY(var(--rotate-x));
-    transition: none;
+    transition: transform 0.3s ease;
 }
 
 /* -----------------------------------------

@@ -4,7 +4,7 @@
     --primary-color: #1f1e1e;
     --accent-color: #b79a75;
     --gradient-bg: linear-gradient(135deg, #1f1e1e, #333);
-    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.051);
     --glass-border: rgba(255, 255, 255, 0.1);
     --text-color: #d0d0d0;
 }
