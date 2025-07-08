@@ -56,6 +56,18 @@ To get a local copy up and running, follow these steps:
 
 Your application should now be running on `http://localhost:3000`.
 
+**Push to Main**
+    ```bash
+    git add .
+    git commit -m "Initial commit"
+    git push -u origin main
+    ```
+
+**Push to gh-pages**
+    ```bash
+    npm run deploy
+    ```
+
 ## Built With
 
 -   React
