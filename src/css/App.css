@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap");
+
+:root {
+	--primary-color: #1f1e1e;
+	--accent-color: #b79a75;
+	--gradient-bg: linear-gradient(135deg, #1f1e1e, #333);
+	--glass-bg: rgba(255, 255, 255, 0.051);
+	--glass-border: rgba(255, 255, 255, 0.1);
+	--text-color: #d0d0d0;
+	--card-radius: 1rem;
+	--card-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+	--title-font: "Arimo", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--title-font);
+	background: var(--gradient-bg);
+	color: var(--text-color);
+	scroll-behavior: smooth;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 5rem;
+}
+
+h3 {
+	font-size: 2.2rem;
+}
+
+p {
+	font-size: 1.2rem;
+}
+
+section {
+	padding: 1.5rem 2rem;
+}
+
+section > .container {
+	max-width: 1250px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+footer {
+	text-align: center;
+	padding: 2rem;
+	background: rgba(0, 0, 0, 0.4);
+	color: var(--text-color);
+}
+
+.fa-html5,
+.fa-css3-alt,
+.fa-js,
+.fa-bootstrap,
+.fa-react,
+.fa-wordpress,
+.fa-mobile-screen-button {
+	color: var(--accent-color);
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(10px);
+		opacity: 0.5;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-5px);
+	}
+	75% {
+		transform: translateX(5px);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes wobble {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(5deg);
+	}
+	50% {
+		transform: rotate(-5deg);
+	}
+	75% {
+		transform: rotate(5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

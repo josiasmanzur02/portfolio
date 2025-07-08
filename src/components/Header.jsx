@@ -1,31 +1,12 @@
-import React from 'react';
-import ProfileCard from './ProfileCard'
-import About from './About';
+import '../css/Header.css'; 
 
-const Header = () => {
+function Header() {
   return (
-    <header>
-      <canvas id="bgCanvas"></canvas>
-      <div className="container">
-        <div className="hero">
-          <ProfileCard
-            name="Josias Manzur"
-            title="Frontend Developer"
-            handle="josiasmanzur"
-            status="Online"
-            contactText="Contact"
-            avatarUrl="/portfolio/images/profile-image.png"
-            showUserInfo={true}
-            enableTilt={true}
-            onContactClick={() => console.log('Contact clicked')}
-          />
-          <div className="intro">
-            <About />
-          </div>
-        </div>
-      </div>
-    </header>
+    <header id='header'>
+    </header>  
   );
-};
+}
 
-export default Header;
+//https://www.dora.run/ai use as a reference for the header component
+
+export default Header;  

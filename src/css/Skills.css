@@ -1,0 +1,147 @@
+.skills-section {
+	padding: 5rem 0;
+	background-color: #121212;
+}
+
+.skills-section .container {
+	max-width: 1250px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.skills-section .container p {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #ccc;
+}
+
+.skill-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem;
+	border-radius: var(--card-radius);
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+	background-color: #1e1e1e;
+	height: 180px;
+	user-select: none;
+	transition: transform 0.3s ease;
+	cursor: default;
+}
+
+.skill-label {
+	color: #eee;
+	font-weight: 600;
+	font-size: 1.25rem;
+}
+
+.card:hover .fa-html5 {
+	animation: bounce 0.6s;
+}
+
+.card:hover .fa-css3-alt {
+	animation: slideUp 0.6s;
+}
+
+.card:hover .fa-js {
+	animation: shake 0.6s;
+}
+
+.card:hover .fa-bootstrap {
+	animation: pulse 0.6s;
+}
+
+.card:hover .fa-react {
+	animation: spin 1.2s linear;
+}
+
+.card:hover .fa-wordpress {
+	animation: fadeInUp 0.6s;
+}
+
+.card:hover .fa-mobile-screen-button {
+	animation: wobble 0.6s;
+}
+
+.skills-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 2rem;
+	justify-items: stretch;
+	align-items: stretch;
+	margin: 0 auto 2rem auto;
+	max-width: 1100px;
+	width: 100%;
+}
+
+.skill-card {
+	background: var(--glass-bg);
+	border: 1px solid var(--glass-border);
+	border-radius: 1rem;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+	padding: 2rem 1rem 1.5rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: transform 0.18s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.18s;
+	cursor: pointer;
+	min-height: 170px;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	max-width: 220px;
+}
+
+.skill-card:hover {
+	box-shadow: 0 8px 32px rgba(183, 154, 117, 0.18),
+		0 2px 8px rgba(0, 0, 0, 0.12);
+	border-color: var(--accent-color);
+	background: rgba(183, 154, 117, 0.08);
+}
+
+.skill-icon {
+	margin-bottom: 1rem;
+	filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
+	transition: filter 0.2s;
+	font-size: 1.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Animations for icons */
+.skill-card .fa-html5:hover {
+	animation: bounce 0.6s;
+}
+.skill-card:hover .fa-css3-alt {
+	animation: slideUp 0.6s;
+}
+.skill-card:hover .fa-js {
+	animation: shake 0.6s;
+}
+.skill-card:hover .fa-bootstrap {
+	animation: pulse 0.6s;
+}
+.skill-card:hover .fa-react {
+	animation: spin 1.2s linear;
+}
+.skill-card:hover .fa-wordpress {
+	animation: fadeInUp 0.6s;
+}
+.skill-card:hover .fa-mobile-screen-button {
+	animation: wobble 0.6s;
+}
+
+.skill-label {
+	font-size: 1.1rem;
+	color: var(--text-color);
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	text-align: center;
+	width: 100%;
+}

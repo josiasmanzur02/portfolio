@@ -1,24 +1,23 @@
-import React from 'react';
+import Navbar from './components/Navbar'; 
 import Header from './components/Header';
-import Portfolio from './components/Portfolio';
+import Projects from './components/Projects';
 import Skills from './components/Skills';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FadeContent from './components/FadeContent'
-import './css/style.css'; 
+import './css/App.css';  
 
 function App() {
   return (
     <div>
       <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-        <Header />
+        <Navbar />
+        <Header /> 
+        <Projects />
         <Skills />
-        <Portfolio />
-        <Contact />
-        <Footer />
+        <Footer /> 
       </FadeContent>
     </div> 
   );
 }
 
-export default App;
+export default App; 
