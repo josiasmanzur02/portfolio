@@ -16,7 +16,7 @@ function App() {
         <Skills />
         <Footer /> 
       </FadeContent>
-    </div> 
+    </div>  
   );
 }
 
