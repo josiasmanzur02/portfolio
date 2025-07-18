@@ -1,0 +1,56 @@
+
+.hero {
+  background: var(--gradient-bg);
+  color: var(--text-color);
+  padding: 10vh 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--card-radius);
+  padding: 3rem 2rem;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.hero-title {
+  font-family: var(--title-font);
+  font-size: 2.8rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+
+.hero-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.hero-button:hover {
+  background-color: #c9a77c;
+  transform: scale(1.03);
+}
