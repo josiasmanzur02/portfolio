@@ -45,7 +45,7 @@ const Skills = () => {
             <SwiperSlide key={idx}>
               <div className="skill-card" style={{color: skill.color}}>
                 <span className="skill-icon" style={{ color: skill.color, marginBottom: '1rem' }}>
-                  <FontAwesomeIcon icon={skill.icon} size="4x" />
+                  <FontAwesomeIcon icon={skill.icon} size="3x" />
                 </span>
                 <span className="skill-label">
                   {skill.label} 

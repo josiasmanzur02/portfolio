@@ -98,8 +98,7 @@
 }
 
 .skill-card:hover {
-	box-shadow: 0 8px 32px rgba(183, 154, 117, 0.18),
-		0 2px 8px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 0px 18px rgba(183, 154, 117, 0.18), 0 2px 8px rgba(0, 0, 0, 0.12);
 	border-color: var(--accent-color);
 	background: rgba(183, 154, 117, 0.08);
 }
