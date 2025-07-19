@@ -14,7 +14,7 @@ const FloatingIcons = () => {
         }}>
           {'</>'}
         </span>
-      ))}
+      ))} 
     </div>
   );
 };
