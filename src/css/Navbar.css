@@ -1,5 +1,5 @@
 .navbar {
-	width: 50vw;
+	width: 60vw;
 	position: fixed;
 	top: 2rem;
 	left: 50%;
@@ -29,4 +29,20 @@
 	background: none;
     border: none;
 	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		width: 80vw;
+	}
+ 
+	.navbar ul li button {
+		font-size: 0.70rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.navbar {
+		width: 90vw;
+	}
 }
