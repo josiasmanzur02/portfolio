@@ -29,6 +29,19 @@ const projects = [
       { name: "React", icon: faReact },
       { name: "CSS3", icon: faCss3Alt },
     ],
+  }
+  ,
+  {
+    imageSrc: "/portfolio/images/website-portfolio.png",
+    altText: "Website Portfolio",
+    captionText: "Website Portfolio",
+    description: "A personal portfolio website showcasing my projects and skills. It features a clean and modern design, with sections for my work, skills, and contact information. The website is built with React and styled using CSS.",
+    githubUrl: "https://github.com/josiasmanzur02/portfolio",
+    liveUrl: "https://josiasmanzur02.github.io/portfolio/",
+    languages: [
+      { name: "React", icon: faReact },
+      { name: "CSS3", icon: faCss3Alt },
+    ],
   },
   {
     imageSrc: "/portfolio/images/wedding-schedule-hymns.png",

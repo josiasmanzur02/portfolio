@@ -28,7 +28,7 @@ body {
 body::after {
   content: "";
   display: block;
-  height: 100vh; /* or a fixed height like 200px */
+  height: 100%;
 }
 
 h2 {

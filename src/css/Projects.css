@@ -7,7 +7,7 @@
 			#000000 9px
 		),
 		repeating-linear-gradient(#1f1e1e55, #1f1e1e);
-		height: 160vh;
+		height: 200vh;
 } 
  
 .accordions {
@@ -19,7 +19,7 @@
 	color: var(--accent-color);
 }
 
-.container .project-cards { 
+.container .project-cards {  
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
