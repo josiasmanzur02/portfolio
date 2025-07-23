@@ -7,7 +7,7 @@
 			#000000 9px
 		),
 		repeating-linear-gradient(#1f1e1e55, #1f1e1e);
-	height: 160vh;
+		height: 160vh;
 } 
  
 .accordions {
@@ -169,4 +169,41 @@
 }
 .fa-mobile-screen-button:hover {
 	animation: wobble 0.6s;
+}
+
+@media (max-width: 768px) {
+	.accordions {
+		padding: 2rem 0rem!important;
+	}
+
+	.container h2 { 
+		font-size: 2.5rem;
+	}
+
+	.project-card {
+		max-width: 100%;
+		gap: 0rem;
+		flex-direction: column;
+		height: 100% !important;
+	}
+
+	.card-image, .card-description {
+		width: 100%;
+	}
+
+	.card-description { 
+		padding: 0rem 0rem;
+	}
+
+	.fa-2x {
+		font-size: 1em;
+	} 
+
+	.text {
+		font-size: 0.75rem;
+	}
+
+	.projects-section {
+		height: auto;
+	}
 }

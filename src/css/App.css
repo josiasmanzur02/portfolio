@@ -166,3 +166,13 @@ footer {
 		transform: rotate(0deg);
 	}
 }
+
+@media (max-width: 768px) {
+	h3 {
+		font-size: 1.2rem; 
+	}
+
+	p {
+		font-size: 0.6rem;
+	}
+}

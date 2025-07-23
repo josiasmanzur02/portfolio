@@ -52,11 +52,13 @@ const projects = [
     githubUrl: "",
     liveUrl: "",
     languages: [{}],
-  },
+  }
 ];
 
 const Projects = () => {
   useEffect(() => {
+    if (window.innerWidth <= 768) return;
+
     const smoother = ScrollSmoother.create({
       content: "#content",
       wrapper: "#wrapper",
@@ -69,12 +71,12 @@ const Projects = () => {
       scrollTrigger: {
         trigger: ".accordions",
         pin: true,
-        start: "top top",
+        start: "top top", 
         end: "bottom top",
         scrub: 1,
         ease: "linear",
       },
-    });
+    }); 
 
     tl.to(".accordion .project-card", {
       height: 0,
@@ -157,5 +159,5 @@ const Projects = () => {
     </section>
   );
 };
-
+ 
 export default Projects;

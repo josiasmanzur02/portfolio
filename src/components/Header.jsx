@@ -78,20 +78,19 @@ const Header = () => {
             dynamic and responsive web applications.
           </p>
         </div>
-        <div className="hero-buttons">
+        <div className="hero-buttons"> 
           <div className="card-links">
-            <a href="/" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/josiasmanzur02" target="_blank" rel="noopener noreferrer">
               <button className="btn">
                 <span className="text">
                   <FontAwesomeIcon className="sparkle" icon={faGithub} /> GitHub
                 </span>
               </button>
             </a>
-            <a href="/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/josiasmanzur" target="_blank" rel="noopener noreferrer">
               <button className="btn">
                 <span className="text">
-                  <FontAwesomeIcon className="sparkle" icon={faInstagram} />{" "}
-                  Instagram
+                  <FontAwesomeIcon className="sparkle" icon={faInstagram} /> Instagram
                 </span>
               </button>
             </a>
@@ -102,4 +101,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header; 

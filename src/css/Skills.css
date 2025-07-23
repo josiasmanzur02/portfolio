@@ -144,3 +144,22 @@
 	text-align: center;
 	width: 100%;
 }
+ 
+@media (max-width: 768px) {
+	.skills-section {
+		padding: 1.5rem 2rem;
+	}
+
+	.skill-label {
+		font-size: 0.75rem;
+	}
+	 
+	.skill-icon {
+		font-size: 0.75rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.skill-card {
+		padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	}
+}

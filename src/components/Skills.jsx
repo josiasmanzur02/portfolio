@@ -21,9 +21,9 @@ const skills = [
 
 const Skills = () => { 
   return (
-    <section className="skills-section" id="skills">
+    <section className="skills-section" id="skills"> 
       <div className="container">
-        <h2>Skills</h2> 
+        <h2>Skills</h2>  
         <p>Technologies & tools I use to build beautiful, responsive web experiences.</p>
 
         <Swiper 
