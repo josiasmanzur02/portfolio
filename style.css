@@ -1,6 +1,6 @@
 /* Fill iOS Safari safe area excess space with site background color */
-body::before,
-body::after {
+html:before,
+html::after {
     content: "";
     position: fixed;
     left: 0;
@@ -9,11 +9,11 @@ body::after {
     z-index: -1; /* changed from 9999 to -1 */
     pointer-events: none;
 }
-body::before {
+html::before {
     top: 0;
     height: env(safe-area-inset-top);
 }
-body::after {
+html::after {
     bottom: 0;
     height: env(safe-area-inset-bottom);
 }
