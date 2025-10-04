@@ -6,7 +6,7 @@ body::after {
     left: 0;
     right: 0;
     background: #333;
-    z-index: 9999;
+    z-index: -1; /* changed from 9999 to -1 */
     pointer-events: none;
 }
 body::before {
