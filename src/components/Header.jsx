@@ -71,7 +71,7 @@ const Header = () => {
 
       <div className="hero-inner">
         <div className="hero-text">
-          <h2 className="hero-title">Josias Manzur</h2>
+          <h2 className="hero-title">Josias Manzur Test</h2>
           <h2 className="hero-subtitle">FrontEnd Developer</h2>
           <p className="hero-description">
             Highly skilled Frontend Developer with a passion for creating
