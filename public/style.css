@@ -1,4 +1,9 @@
 /* Fill iOS Safari safe area excess space with theme color */
+
+html{
+    background-color: linear-gradient(135deg, #1f1e1e, #333);
+}
+
 body::before,
 body::after {
     content: "";
