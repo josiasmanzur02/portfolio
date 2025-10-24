@@ -72,10 +72,10 @@ const Header = () => {
       <div className="hero-inner">
         <div className="hero-text">
           <h2 className="hero-title">Josias Manzur</h2>
-          <h2 className="hero-subtitle">FrontEnd Developer</h2>
+          <h2 className="hero-subtitle">Full Stack Developer</h2>
           <p className="hero-description">
-            Highly skilled Frontend Developer with a passion for creating
-            dynamic and responsive web applications.
+            Crafting seamless web experiences with expertise in both front-end
+            and back-end development.
           </p>
         </div>
         <div className="hero-buttons"> 
