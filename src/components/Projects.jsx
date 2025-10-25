@@ -11,13 +11,14 @@ import {
   faCss3Alt,
   faJs,
   faReact,
+  faNode
 } from "@fortawesome/free-brands-svg-icons";
 import { faDisplay } from "@fortawesome/free-solid-svg-icons"; 
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother); 
 
 const projects = [
-  {
+  { 
     imageSrc: "/portfolio/images/ub-job-portal.png",
     altText: "University of Belize Job Portal",
     captionText: "University of Belize Job Portal",
@@ -27,10 +28,22 @@ const projects = [
     liveUrl: "https://ub-job-portal.netlify.app/",
     languages: [
       { name: "React", icon: faReact },
-      { name: "CSS3", icon: faCss3Alt },
+      { name: "CSS3", icon: faCss3Alt }, 
     ],
-  }
-  ,
+  },
+  {
+    imageSrc: "/portfolio/images/blog-tool.png",
+    altText: "Blog Tool",
+    captionText: "Blog Tool",
+    description: "A blog tool focusing on implementing middleware, post, and get requests using Node.js and Express for the backend and EJS to load data into the frontend. Allows the user to enter a blog and also view and delete existing blogs. Full implementation would be with a database to store the blogs.",
+    githubUrl: "https://github.com/josiasmanzur02/blog-tool",
+    liveUrl: "https://github.com/josiasmanzur02/blog-tool",
+    languages: [
+      { name: "HTML5", icon: faHtml5 }, 
+      { name: "CSS3", icon: faCss3Alt },
+      { name: "Node.js", icon: faNode },
+    ],
+  },
   {
     imageSrc: "/portfolio/images/website-portfolio.png",
     altText: "Website Portfolio",
@@ -56,15 +69,6 @@ const projects = [
       { name: "CSS3", icon: faCss3Alt },
       { name: "JavaScript", icon: faJs },
     ],
-  },
-  {
-    imageSrc: "/portfolio/images/project-placeholder.png",
-    altText: "Project Placeholder",
-    captionText: "Project Placeholder",
-    description: "Short description for Project 3.",
-    githubUrl: "",
-    liveUrl: "",
-    languages: [{}],
   }
 ];
 

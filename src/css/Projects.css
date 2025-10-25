@@ -1,14 +1,17 @@
 .projects-section {
-	background-color: #000000;
-	opacity: 0.9;
-	background-image: repeating-radial-gradient(
-			circle at 0 0,
-			transparent 0,
-			#000000 9px
-		),
-		repeating-linear-gradient(#1f1e1e55, #1f1e1e);
-		height: 300vh;
-} 
+    background-color: #000000;
+    opacity: 0.9;
+    background-image: 
+        repeating-radial-gradient(circle at 0 0, transparent 0, #000000 9px),
+        repeating-linear-gradient(#1f1e1e55, #1f1e1e);
+    height: 200vh; 
+}
+
+@media (max-height: 900px) {
+    .projects-section {
+        height: 300vh;
+    }
+}
  
 .accordions {
 	padding: 5rem 0rem;
@@ -146,29 +149,6 @@
 .btn:hover .sparkle {
 	fill: white;
 	transform: scale(1.2);
-}
-
-/* Animations for icons */
-.fa-html5:hover {
-	animation: bounce 0.6s;
-}
-.fa-css3-alt:hover {
-	animation: slideUp 0.6s;
-}
-.fa-js:hover {
-	animation: shake 0.6s;
-}
-.fa-bootstrap:hover {
-	animation: pulse 0.6s;
-}
-.fa-react:hover {
-	animation: spin 1.2s linear;
-}
-.fa-wordpress:hover {
-	animation: fadeInUp 0.6s;
-}
-.fa-mobile-screen-button:hover {
-	animation: wobble 0.6s;
 }
 
 @media (max-width: 768px) {

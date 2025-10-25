@@ -1,7 +1,7 @@
 import "../css/Skills.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3Alt, faJs, faBootstrap, faReact, faWordpress } from '@fortawesome/free-brands-svg-icons';
-import { faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faHtml5, faCss3Alt, faJs, faBootstrap, faReact, faWordpress, faFigma , faNode, faDocker} from '@fortawesome/free-brands-svg-icons';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
@@ -10,13 +10,17 @@ import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css'; 
 
 const skills = [
-  { icon: faHtml5, label: 'HTML', color: '#e44d26' },
-  { icon: faCss3Alt, label: 'CSS', color: '#264de4' },
-  { icon: faJs, label: 'JavaScript/JQuery', color: '#f0db4f' },
-  { icon: faBootstrap, label: 'Bootstrap', color: '#7952b3' },
-  { icon: faReact, label: 'React', color: '#61dafb' },
-  { icon: faWordpress, label: 'WordPress', color: '#21759b' },
-  { icon: faMobileScreenButton, label: 'Responsive Design', color: '#4caf50' },
+  { icon: faReact, label: 'React'},
+  { icon: faHtml5, label: 'HTML'},
+  { icon: faCss3Alt, label: 'CSS' },
+  { icon: faJs, label: 'JavaScript/JQuery' },
+  { icon: faBootstrap, label: 'Bootstrap'},
+  { icon: faWordpress, label: 'WordPress'}, 
+  { icon: faFigma, label: 'Figma'},
+  { icon: faNode, label: 'Node.js'},
+  { icon: faDatabase, label: 'SQL'},
+  { icon: faDocker, label: 'Docker'},
+  { icon: faGithub, label: 'Github'}
 ];
 
 const Skills = () => { 
@@ -44,7 +48,7 @@ const Skills = () => {
           {skills.map((skill, idx) => (
             <SwiperSlide key={idx}>
               <div className="skill-card" style={{color: skill.color}}>
-                <span className="skill-icon" style={{ color: skill.color, marginBottom: '1rem' }}>
+                <span className="skill-icon" style={{ marginBottom: '1rem' }}>
                   <FontAwesomeIcon icon={skill.icon} size="3x" />
                 </span>
                 <span className="skill-label">
