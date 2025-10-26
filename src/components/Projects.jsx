@@ -108,7 +108,7 @@ const Projects = () => {
         ease: "linear",
       },
     }); 
-
+ 
     tl.to(".accordion .project-card", {
       height: 0,
       paddingBottom: 0,
@@ -119,7 +119,7 @@ const Projects = () => {
     tl.to(
       ".accordion",
       {
-        marginBottom: -15,
+        marginBottom: -45,
         stagger: 0.5,
       },
       "<"
