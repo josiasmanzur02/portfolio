@@ -4,14 +4,8 @@
     background-image: 
         repeating-radial-gradient(circle at 0 0, transparent 0, #000000 9px),
         repeating-linear-gradient(#1f1e1e55, #1f1e1e);
-    height: 230vh; 
 }
 
-@media (max-height: 900px) {
-    .projects-section {
-        height: 370vh;
-    }
-}  
  
 .accordions {
 	padding: 5rem 0rem;
