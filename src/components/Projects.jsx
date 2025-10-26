@@ -19,6 +19,20 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const projects = [
   { 
+    imageSrc: "/portfolio/images/football-tracking.png",
+    altText: "(Current Project) Football Tracking",
+    captionText: "(Current Project) Football Tracking",
+    description:
+      "I am currently working on a football tracking app as part of a full stack course I am taking. I am using Node.js, Express, EJS and then connecting to a free online API to pull data for my favorite leagues and teams. In progress..",
+    githubUrl: "https://github.com/josiasmanzur02/football-tracking",
+    liveUrl: "https://github.com/josiasmanzur02/football-tracking",
+    languages: [
+      { name: "HTML5", icon: faHtml5 }, 
+      { name: "CSS3", icon: faCss3Alt },
+      { name: "Node.js", icon: faNode }
+    ],
+  },
+  { 
     imageSrc: "/portfolio/images/ub-job-portal.png",
     altText: "University of Belize Job Portal",
     captionText: "University of Belize Job Portal",
@@ -28,7 +42,7 @@ const projects = [
     liveUrl: "https://ub-job-portal.netlify.app/",
     languages: [
       { name: "React", icon: faReact },
-      { name: "CSS3", icon: faCss3Alt }, 
+      { name: "CSS3", icon: faCss3Alt }
     ],
   },
   {
@@ -41,7 +55,7 @@ const projects = [
     languages: [
       { name: "HTML5", icon: faHtml5 }, 
       { name: "CSS3", icon: faCss3Alt },
-      { name: "Node.js", icon: faNode },
+      { name: "Node.js", icon: faNode }
     ],
   },
   {
@@ -53,7 +67,7 @@ const projects = [
     liveUrl: "https://josiasmanzur02.github.io/portfolio/",
     languages: [
       { name: "React", icon: faReact },
-      { name: "CSS3", icon: faCss3Alt },
+      { name: "CSS3", icon: faCss3Alt }
     ],
   },
   {
