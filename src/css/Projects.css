@@ -9,9 +9,9 @@
 
 @media (max-height: 900px) {
     .projects-section {
-        height: 360vh;
+        height: 370vh;
     }
-} 
+}  
  
 .accordions {
 	padding: 5rem 0rem;
