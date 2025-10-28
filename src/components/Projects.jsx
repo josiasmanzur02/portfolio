@@ -25,12 +25,12 @@ const projects = [
     description:
       "I am currently working on a football tracking app as part of a full stack course I am taking. I am using Node.js, Express, EJS and then connecting to a free online API to pull data for my favorite leagues and teams. In progress..",
     githubUrl: "https://github.com/josiasmanzur02/football-tracking",
-    liveUrl: "https://github.com/josiasmanzur02/football-tracking",
+    liveUrl: "https://football-tracking.onrender.com",
     languages: [
       { name: "HTML5", icon: faHtml5 }, 
       { name: "CSS3", icon: faCss3Alt },
       { name: "Node.js", icon: faNode }
-    ],
+    ], 
   },
   { 
     imageSrc: "/portfolio/images/ub-job-portal.png",
@@ -51,7 +51,7 @@ const projects = [
     captionText: "Blog Tool",
     description: "A blog tool focusing on implementing middleware, post, and get requests using Node.js and Express for the backend and EJS to load data into the frontend. Allows the user to enter a blog and also view and delete existing blogs. Full implementation would be with a database to store the blogs.",
     githubUrl: "https://github.com/josiasmanzur02/blog-tool",
-    liveUrl: "https://github.com/josiasmanzur02/blog-tool",
+    liveUrl: "https://blog-tool-80x1.onrender.com", 
     languages: [
       { name: "HTML5", icon: faHtml5 }, 
       { name: "CSS3", icon: faCss3Alt },
