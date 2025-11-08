@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import "../css/Projects.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -11,9 +10,11 @@ import {
   faCss3Alt,
   faJs,
   faReact,
-  faNode
+  faNode,
+  faDocker
 } from "@fortawesome/free-brands-svg-icons";
-import { faDisplay } from "@fortawesome/free-solid-svg-icons"; 
+import { faDisplay, faDatabase } from "@fortawesome/free-solid-svg-icons"; 
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother); 
 
@@ -30,6 +31,22 @@ const projects = [
       { name: "HTML5", icon: faHtml5 }, 
       { name: "CSS3", icon: faCss3Alt },
       { name: "Node.js", icon: faNode }
+    ], 
+  },
+  { 
+    imageSrc: "/portfolio/images/flag-guess-game.png",
+    altText: "Flag Guessing Game",
+    captionText: "Flag Guessing Game",
+    description:
+      "This is a flag guessing game created for a school project, the goal was to use docker in our project. It uses Node.js, Express, EJS and a PostgreSQL database to store users, highscores, and user sessions.",
+    githubUrl: "https://github.com/josiasmanzur02/sysadmin-login-docker",
+    liveUrl: "https://sysadmin-login-docker.onrender.com",
+    languages: [
+      { name: "HTML5", icon: faHtml5 }, 
+      { name: "CSS3", icon: faCss3Alt },
+      { name: "Node.js", icon: faNode },
+      { name: "Docker", icon: faDocker},
+      { name: "PostgreSQL", icon: faDatabase}
     ], 
   },
   { 
