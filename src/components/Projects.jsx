@@ -20,20 +20,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const projects = [
   { 
-    imageSrc: "/portfolio/images/football-tracking.png",
-    altText: "Football Tracking",
-    captionText: "Football Tracking", 
-    description:
-      "A completed full-stack football tracking dashboard built with Node.js, Express, and EJS. It consumes a third-party football API to surface fixtures, standings, and club details for my favorite leagues, then renders the data in responsive views for quick lookups.",
-    githubUrl: "https://github.com/josiasmanzur02/football-tracking",
-    liveUrl: "https://football-tracking.onrender.com",
-    languages: [
-      { name: "HTML5", icon: faHtml5 }, 
-      { name: "CSS3", icon: faCss3Alt },
-      { name: "Node.js", icon: faNode }
-    ], 
-  },
-  { 
     imageSrc: "/portfolio/images/flag-guess-game.png",
     altText: "Flag Guessing Game",
     captionText: "Flag Guessing Game",
@@ -49,6 +35,20 @@ const projects = [
       { name: "PostgreSQL", icon: faDatabase}
     ], 
   },
+  { 
+    imageSrc: "/portfolio/images/football-tracking.png",
+    altText: "Football Tracking",
+    captionText: "Football Tracking", 
+    description:
+      "A completed full-stack football tracking dashboard built with Node.js, Express, and EJS. It consumes a third-party football API to surface fixtures, standings, and club details for my favorite leagues, then renders the data in responsive views for quick lookups.",
+    githubUrl: "https://github.com/josiasmanzur02/football-tracking",
+    liveUrl: "https://football-tracking.onrender.com",
+    languages: [
+      { name: "HTML5", icon: faHtml5 }, 
+      { name: "CSS3", icon: faCss3Alt },
+      { name: "Node.js", icon: faNode }
+    ], 
+  }, 
   { 
     imageSrc: "/portfolio/images/ub-job-portal.png",
     altText: "University of Belize Job Portal",
