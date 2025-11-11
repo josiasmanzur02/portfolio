@@ -21,10 +21,10 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const projects = [
   { 
     imageSrc: "/portfolio/images/football-tracking.png",
-    altText: "(Current Project) Football Tracking",
-    captionText: "(Current Project) Football Tracking",
+    altText: "Football Tracking",
+    captionText: "Football Tracking", 
     description:
-      "I am currently working on a football tracking app as part of a full stack course I am taking. I am using Node.js, Express, EJS and then connecting to a free online API to pull data for my favorite leagues and teams. In progress..",
+      "A completed full-stack football tracking dashboard built with Node.js, Express, and EJS. It consumes a third-party football API to surface fixtures, standings, and club details for my favorite leagues, then renders the data in responsive views for quick lookups.",
     githubUrl: "https://github.com/josiasmanzur02/football-tracking",
     liveUrl: "https://football-tracking.onrender.com",
     languages: [
@@ -38,7 +38,7 @@ const projects = [
     altText: "Flag Guessing Game",
     captionText: "Flag Guessing Game",
     description:
-      "This is a flag guessing game created for a school project, the goal was to use docker in our project. It uses Node.js, Express, EJS and a PostgreSQL database to store users, highscores, and user sessions.",
+      "A Dockerized Node.js, Express, and EJS guessing game that challenges users to identify country flags. The PostgreSQL backend tracks players, sessions, and high scores, making it easy to spin up locally or in the cloud via the included Docker workflow.",
     githubUrl: "https://github.com/josiasmanzur02/sysadmin-login-docker",
     liveUrl: "https://sysadmin-login-docker.onrender.com",
     languages: [
@@ -54,7 +54,7 @@ const projects = [
     altText: "University of Belize Job Portal",
     captionText: "University of Belize Job Portal",
     description:
-      "A job portal for the University of Belize, designed to connect students with job opportunities. The portal allows students to create profiles, upload resumes, and apply for jobs posted by employers. It also includes features for employers to post job listings and manage applications.",
+      "A React-powered job portal concept for the University of Belize that connects students with opportunities. Students can browse curated postings, while employers manage listings from an admin view, all wrapped in a clean UI built with reusable components.",
     githubUrl: "https://github.com/JosiasManzur/ub-job-portal",
     liveUrl: "https://ub-job-portal.netlify.app/",
     languages: [
@@ -66,7 +66,7 @@ const projects = [
     imageSrc: "/portfolio/images/blog-tool.png",
     altText: "Blog Tool",
     captionText: "Blog Tool",
-    description: "A blog tool focusing on implementing middleware, post, and get requests using Node.js and Express for the backend and EJS to load data into the frontend. Allows the user to enter a blog and also view and delete existing blogs. Full implementation would be with a database to store the blogs.",
+    description: "A lightweight blogging utility that demonstrates custom middleware plus RESTful POST/GET routes in Node.js and Express. EJS templates render entries so users can draft, view, and delete posts; a database layer can be plugged in for persistence.",
     githubUrl: "https://github.com/josiasmanzur02/blog-tool",
     liveUrl: "https://blog-tool-80x1.onrender.com", 
     languages: [
@@ -79,7 +79,7 @@ const projects = [
     imageSrc: "/portfolio/images/website-portfolio.png",
     altText: "Website Portfolio",
     captionText: "Website Portfolio",
-    description: "A personal portfolio website showcasing my projects and skills. It features a clean and modern design, with sections for my work, skills, and contact information. The website is built with React and styled using CSS.",
+    description: "This site—my personal portfolio—highlights recent work, skills, and ways to connect. Built with React components and modular CSS, it focuses on accessibility, smooth scrolling, and quick navigation between featured projects.",
     githubUrl: "https://github.com/josiasmanzur02/portfolio",
     liveUrl: "https://josiasmanzur02.github.io/portfolio/",
     languages: [
@@ -92,7 +92,7 @@ const projects = [
     altText: "Wedding Schedule & Hymns",
     captionText: "Wedding Schedule & Hymns",
     description:
-      "A simple web application for guests at my wedding for them to view the schedule and hymns during the ceremony. It includes a user-friendly interface to navigate through the schedule and hymns, ensuring that guests can easily follow along during the event.",
+      "A static site created for our wedding so guests could follow the ceremony order and lyrics in real time. The responsive layout keeps the schedule and hymns only a tap away, making it practical on phones and tablets during the event.",
     githubUrl: "https://github.com/josiasmanzur02/wedding-schedule-and-songs",
     liveUrl: "https://josiasmanzur02.github.io/wedding-schedule-and-songs/",
     languages: [
